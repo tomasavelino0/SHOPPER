@@ -1,15 +1,15 @@
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import api from './routes';
+import apiCorridas from './routes/corridasApiRouter';
 
 class App {
   public app: express.Express;
 
   constructor() {
     this.app = express();
-
     this.config();
-    this.app.use('', api);
+    this.app.use('', apiCorridas);
 
   }
 

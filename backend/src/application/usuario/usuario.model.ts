@@ -1,17 +1,14 @@
 import { DataTypes, Model } from "sequelize";
 import sequelize from "../../database/sequelize";
 
-interface Motorista extends Model {
+interface Usuario extends Model {
   id: number;
   nome: string;
-  descricao: string;
-  carro: string;
-  avaliacao: string;
-  taxa: string;
-  kmMinimo: string;
+  email: string;
+  password: string;
 }
 
-export const Motorista = sequelize.define<Motorista>('motoristas', {
+export const Usuario = sequelize.define<Usuario>('usuarios', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -21,25 +18,17 @@ export const Motorista = sequelize.define<Motorista>('motoristas', {
     type: DataTypes.STRING,
     allowNull: false
   },
-  descricao: {
-    type: DataTypes.STRING,
-  },
-  carro: {
+  email: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  avaliacao: {
+  password: {
     type: DataTypes.STRING,
-  },
-  taxa: {
-    type: DataTypes.STRING,
-  },
-  kmMinimo: {
-    type: DataTypes.STRING,
+    allowNull: false
   }
 }, {
-  tableName: 'motoristas',
-  modelName: 'motoristas',
+  tableName: 'usuarios',
+  modelName: 'usuarios',
   timestamps: false,
   schema: 'public',
   underscored: false,

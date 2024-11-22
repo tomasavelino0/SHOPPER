@@ -1,5 +1,5 @@
 {
-  "name": "api-marketing",
+  "name": "Shopper-teste",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,8 +11,9 @@
     "migrate": "npx sequelize-cli --config ./dist/database/config.js db:migrate --migrations-path ./dist/database/migrations",
     "seed": "npx sequelize-cli --config ./dist/database/config.js db:seed:all --seeders-path ./dist/database/seeders",
     "drop": "npx sequelize-cli --config ./dist/database/config.js db:drop",
+    "db:reset": "npm run build && npm run drop && npm run sequelize && npm run migrate",
     "db:start": "npm run build && npm run migrate",
-    "db:dev": "npm run build && npm run sequelize && npm run migrate"
+    "db:dev": "npm run build && npm run migrate"
   },
   "keywords": [],
   "author": "",

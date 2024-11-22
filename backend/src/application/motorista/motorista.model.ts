@@ -32,7 +32,7 @@ export const Motorista = sequelize.define<Motorista>('motoristas', {
     type: DataTypes.STRING,
   },
   taxa: {
-    type: DataTypes.STRING,
+    type: DataTypes.DECIMAL,
   },
   kmMinimo: {
     type: DataTypes.STRING,
