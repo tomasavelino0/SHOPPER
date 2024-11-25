@@ -61,6 +61,7 @@ export const getBestRoute = async (
     const bestRoute = routes[0];
 
     return {
+      original: response.data,
       duration: bestRoute.duration,
       distanceMeters: bestRoute.distanceMeters,
       encodedPolyline: bestRoute.polyline.encodedPolyline,

@@ -42,12 +42,16 @@ export default {
         allowNull: false,
       },
       distancia: {
-        type: DataTypes.STRING,
+        type: DataTypes.DECIMAL(7, 3),
         allowNull: false,
       },
       tempoPercurso: {
         type: DataTypes.STRING,
         allowNull: false,
+      },
+      createdAt: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
       },
     });
   },
@@ -56,3 +60,4 @@ export default {
     await queryInterface.dropTable('corridas');
   },
 };
+

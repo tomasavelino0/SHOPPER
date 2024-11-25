@@ -7,8 +7,8 @@ interface Corrida extends Model {
   idMotorista: number;
   origem: string;
   destino: string;
-  valor: string;
-  distancia: string;
+  valor: number;
+  distancia: number;
   tempoPercurso: string;
 }
 
@@ -44,15 +44,17 @@ export const Corrida = sequelize.define<Corrida>('corridas', {
     type: DataTypes.DECIMAL,
   },
   distancia: {
-    type: DataTypes.STRING,
+    type: DataTypes.DECIMAL(7, 3),
   },
   tempoPercurso: {
     type: DataTypes.STRING,
-  }
+  },
 }, {
   tableName: 'corridas',
   modelName: 'corridas',
-  timestamps: false,
+  timestamps: true,
+  createdAt: true,
+  updatedAt: false,
   schema: 'public',
   underscored: false,
 });
