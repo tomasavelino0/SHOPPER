@@ -1,5 +1,7 @@
 import { DataTypes, Model } from "sequelize";
 import sequelize from "../../database/sequelize";
+import { Motorista } from "../motorista/motorista.model";
+import { Usuario } from "../usuario/usuario.model";
 
 interface Corrida extends Model {
   id: number;
@@ -58,3 +60,6 @@ export const Corrida = sequelize.define<Corrida>('corridas', {
   schema: 'public',
   underscored: false,
 });
+
+Corrida.belongsTo(Motorista, { foreignKey: "idMotorista" });
+Corrida.belongsTo(Usuario, { foreignKey: "idUsuario" });

@@ -16,3 +16,8 @@ export interface IConfirmCorrida {
   },
   value: number
 }
+
+export interface ICorridaByDate {
+  idUser: number;
+  idMotorista?: number
+}

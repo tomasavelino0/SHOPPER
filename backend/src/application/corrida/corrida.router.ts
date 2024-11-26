@@ -1,11 +1,12 @@
 import { Router } from 'express';
-import { confirmCorridaController, createNewCorridaController, getAllCorridasController } from './corrida.controller';
-import { validateCreateCorridaBody, validateConfirmCorridaBody } from './utils/corrida.middlewares';
+import { confirmCorridaController, createNewCorridaController, getAllCorridasByDateController } from './corrida.controller';
+import { validateCreateCorridaBody, validateConfirmCorridaBody, validateGetCorridaByDateBody } from './utils/corrida.middlewares';
 
 const corridaRouter = Router();
 
-corridaRouter.get('/ride', getAllCorridasController);
+corridaRouter.get('/ride/:customer_id', validateGetCorridaByDateBody, getAllCorridasByDateController);
 corridaRouter.post('/ride/estimate', validateCreateCorridaBody, createNewCorridaController);
 corridaRouter.post('/ride/confirm', validateConfirmCorridaBody, confirmCorridaController);
+
 
 export default corridaRouter;

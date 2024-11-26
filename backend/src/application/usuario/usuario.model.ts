@@ -1,5 +1,6 @@
 import { DataTypes, Model } from "sequelize";
 import sequelize from "../../database/sequelize";
+import { Corrida } from "../corrida/corrida.model";
 
 interface Usuario extends Model {
   id: number;
@@ -33,4 +34,3 @@ export const Usuario = sequelize.define<Usuario>('usuarios', {
   schema: 'public',
   underscored: false,
 });
-
