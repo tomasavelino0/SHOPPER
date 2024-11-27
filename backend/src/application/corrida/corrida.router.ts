@@ -6,6 +6,6 @@ const corridaRouter = Router();
 
 corridaRouter.get('/ride/:customer_id', validateGetCorridaByDateBody, getAllCorridasByDateController);
 corridaRouter.post('/ride/estimate', validateCreateCorridaBody, createNewCorridaController);
-corridaRouter.post('/ride/confirm', validateConfirmCorridaBody, confirmCorridaController);
+corridaRouter.patch('/ride/confirm', validateConfirmCorridaBody, confirmCorridaController);
 
 export default corridaRouter;
