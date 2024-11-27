@@ -1,21 +1,26 @@
 import * as jwt from 'jsonwebtoken';
-import { IVerifyToken, IJwtconfig } from '../interfaces/tokenJwt';
 import 'dotenv/config';
 
 const secret = process.env.JWT_SECRET as string;
 
-const jwtConfig: IJwtconfig = {
-  expiresIn: '365d',
+const jwtConfig = {
+  expiresIn: '10d',
 };
 
-const createToken = (userWithoutPassword: object): string => {
+const createToken = (userWithoutPassword: ICreateToken): string => {
   const token = jwt.sign({ data: userWithoutPassword }, secret, jwtConfig);
   return token;
 };
 
-const verifyToken = (authorization: string): IVerifyToken => {
+const verifyToken = (authorization: string) => {
   const payload = jwt.verify(authorization, secret);
-  return payload as IVerifyToken;
+  return payload;
 };
+
+interface ICreateToken {
+  id: number,
+  nome: string,
+  email: string
+}
 
 export { createToken, verifyToken };

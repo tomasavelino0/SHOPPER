@@ -8,5 +8,4 @@ corridaRouter.get('/ride/:customer_id', validateGetCorridaByDateBody, getAllCorr
 corridaRouter.post('/ride/estimate', validateCreateCorridaBody, createNewCorridaController);
 corridaRouter.post('/ride/confirm', validateConfirmCorridaBody, confirmCorridaController);
 
-
 export default corridaRouter;

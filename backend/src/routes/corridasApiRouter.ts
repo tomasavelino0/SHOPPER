@@ -1,8 +1,10 @@
 import { Router } from 'express';
 import corridaRouter from '../application/corrida/corrida.router';
+import loginRouter from '../application/auth/login.router';
 
-const apiCorridas = Router();
+const apiMain = Router();
 
-apiCorridas.use('', corridaRouter);
+apiMain.use('', corridaRouter);
+apiMain.use('', loginRouter);
 
-export default apiCorridas;
+export default apiMain;

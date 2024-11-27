@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import apiCorridas from './routes/corridasApiRouter';
+import apiMain from './routes/corridasApiRouter';
 
 class App {
   public app: express.Express;
@@ -9,7 +9,7 @@ class App {
   constructor() {
     this.app = express();
     this.config();
-    this.app.use('', apiCorridas);
+    this.app.use('', apiMain);
 
   }
 
