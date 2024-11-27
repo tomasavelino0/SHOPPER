@@ -47,7 +47,7 @@ const Login = () => {
         if (token.token) {
           localStorage.setItem("authUser", JSON.stringify(token));
           localStorage.setItem("user", JSON.stringify(token.user));
-          navigate('/dashboard');
+          navigate('/historico');
         }
       } catch (error: any) {
         if (error.status !== 200) {

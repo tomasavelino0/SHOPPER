@@ -14,15 +14,12 @@ const Sidebar = () => {
   return (
     <Container>
       <div className="divLogo" style={{ display: 'flex', justifyContent: 'center' }}>
-        <Link to="/dashboard">
-          <img style={{ width: '220px', height: '100px' }} src={logoIcon} alt="Logo" />
-        </Link>
       </div>
       <Content>
-        <Link to="/dashboard">
+        <Link to="/corrida">
           <SidebarItem Icon={FaHome} Text="Corridas" />
         </Link>
-        <Link to="/dashboard">
+        <Link to="/historico">
           <SidebarItem Icon={FaRegFileAlt} Text="Histórico" />
         </Link>
       </Content>
