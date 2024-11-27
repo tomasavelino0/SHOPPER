@@ -10,7 +10,7 @@ import "./App.css";
 // Import scss
 import "./assets/scss/theme.scss";
 import Login from "./pages/Authentication/Login";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/Main";
 
 const App = () => {
 
