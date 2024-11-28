@@ -1,0 +1,11 @@
+# Usar uma imagem base do nginx
+FROM nginx:alpine
+
+# Copiar os arquivos estáticos para o diretório padrão do nginx
+COPY ./dist /usr/share/nginx/html
+
+# Expor a porta 80
+EXPOSE 80
+
+# Comando padrão para nginx
+CMD ["nginx", "-g", "daemon off;"]

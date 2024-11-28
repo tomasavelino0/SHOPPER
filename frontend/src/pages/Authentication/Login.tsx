@@ -81,7 +81,7 @@ const Login = () => {
                     <Link to="/" className="auth-logo-dark">
                       <div>
                         <span>
-                          <img src={logo} alt="Logo" className="" height="80" width="400" style={{ borderRadius: 10 }} />
+                          <img src={logo} alt="Logo" className="" height="200" width="400" style={{ borderRadius: 10 }} />
                         </span>
                       </div>
                     </Link>

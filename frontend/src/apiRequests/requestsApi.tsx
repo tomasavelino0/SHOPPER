@@ -1,6 +1,4 @@
 import axios from 'axios'
-
-export const BASE_URL_FRONT = 'http://localhost:3006'
 export const BASE_URL = "http://localhost:8080";
 
 export const getInfoCEPrequest = async (cep) => {
@@ -16,7 +14,7 @@ export const getInfoCEPrequest = async (cep) => {
 }
 
 export const loginToken = async (endpoint, data) => {
-  const url = `${BASE_URL}${endpoint}`;
+  const url = `${BASE_URL}/login`;
   const axiosInstance = axios.create({
     headers: {
       'Content-Type': 'application/json',

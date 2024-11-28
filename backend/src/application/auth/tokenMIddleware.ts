@@ -3,7 +3,7 @@ import * as jwt from 'jsonwebtoken';
 import { IVerifyToken } from './tokenInterfaces';
 import { Usuario } from '../usuario/usuario.model';
 
-const secret = process.env.JWT_SECRET as string || ''
+const secret = process.env.JWT_SECRET as string || 'teste'
 
 const jwtConfig = {
   expiresIn: '10d',

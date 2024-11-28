@@ -18,3 +18,7 @@ services:
       context: ./frontend
     ports:
       - "80:80"
+    environment:
+      NODE_ENV: production
+    volumes:
+      - ./frontend:/app

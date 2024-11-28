@@ -79,7 +79,7 @@ const HistoricoCorridas = () => {
           <Form>
             <FormGroup row>
               <Label for="customer_id" sm={2}>
-                ID do Usuário
+                <strong>ID do Usuário da sessao</strong>
               </Label>
               <Col sm={10}>
                 <Input
@@ -92,7 +92,7 @@ const HistoricoCorridas = () => {
             </FormGroup>
             <FormGroup row>
               <Label for="driver_filter" sm={2}>
-                Seletor de Motorista
+                <strong>Seletor de Motorista</strong>
               </Label>
               <Col sm={10}>
                 <Input

@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config({ path: '../.env' });
 
 const GOOGLE_API_URL = "https://routes.googleapis.com/directions/v2:computeRoutes";
-const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY || 'AIzaSyDA8d8V-QdOiQbxX5BrOyT3wLYy2Ak_zOg'
 const CORDINATES_API_GOOGLE = 'https://maps.googleapis.com/maps/api/geocode/json'
 
 export const getBestRoute = async (

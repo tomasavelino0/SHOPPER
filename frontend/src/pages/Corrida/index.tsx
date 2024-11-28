@@ -15,8 +15,11 @@ const propis = {
   text: "Preencha o formulário de criação"
 };
 
-const Corrida = (props) => {
-  props = propis;
+const Corrida = () => {
+  const props = {
+    title: "Nova Corrida",
+    text: "Preencha o formulário de criação"
+  };
   const navigate = useNavigate();
   const [msgSucess, setMsgSucess] = useState("");
   const [msgError, setMsgError] = useState("");
