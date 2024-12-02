@@ -2,11 +2,11 @@ import { Options } from 'sequelize';
 
 const config: Options = {
   dialect: 'postgres',
-  host: 'dpg-csidis5ds78s73eorek0-a.ohio-postgres.render.com',
+  host: 'dpg-ct6sflg8fa8c739hf7mg-a.ohio-postgres.render.com',
   port: 5432,
-  username: 'mesa_db_user',
-  password: 'ksHfbmWoibczgJCGnBLPckGXrMM6SrMT',
-  database: 'mesa_db',
+  username: 'tomas',
+  password: 'uKQMIzrvGLKaIN6U01STbbGUR0eUru0l',
+  database: 'banco_tomas',
   dialectOptions: {
     ssl: {
       require: true,
